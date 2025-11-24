@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const services = [
   {
@@ -236,10 +237,65 @@ export default function Services() {
                       </li>
                     ))}
                   </ul>
-                  {service.items.length > 3 && (
-                    <button className="mt-3 text-sm text-blue-600 hover:text-cyan-600 font-semibold transition-colors">
-                      {isExpanded ? 'Show less' : 'Show more'}
-                    </button>
+                  {service.title === 'Immigration & Arrival Support' && (
+                    <div className="mt-4">
+                      <Link
+                        href="/services/passport-visa"
+                        className="inline-block text-sm px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold hover:shadow-2xl hover:shadow-blue-500/50 transform hover:scale-105 transition-all"
+                      >
+                        Learn more
+                      </Link>
+                    </div>
+                  )}
+                  {service.title === 'Flight Booking & Travel Planning' && (
+                    <div className="mt-4">
+                      <Link
+                        href="/services/flight-accommodation"
+                        className="inline-block text-sm px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold hover:shadow-2xl hover:shadow-blue-500/50 transform hover:scale-105 transition-all"
+                      >
+                        Learn more
+                      </Link>
+                    </div>
+                  )}
+                  {service.title === 'Accommodation Packages' && (
+                    <div className="mt-4">
+                      <Link
+                        href="/services/flight-accommodation"
+                        className="inline-block text-sm px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold hover:shadow-2xl hover:shadow-blue-500/50 transform hover:scale-105 transition-all"
+                      >
+                        Learn more
+                      </Link>
+                    </div>
+                  )}
+                  {service.title === 'Business Travel Add-Ons' && (
+                    <div className="mt-4">
+                      <Link
+                        href="/services/corporate-travel"
+                        className="inline-block text-sm px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold hover:shadow-2xl hover:shadow-blue-500/50 transform hover:scale-105 transition-all"
+                      >
+                        Learn more
+                      </Link>
+                    </div>
+                  )}
+                  {service.title === 'Concierge & Lifestyle Services' && (
+                    <div className="mt-4">
+                      <Link
+                        href="/services/private-concierge"
+                        className="inline-block text-sm px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold hover:shadow-2xl hover:shadow-blue-500/50 transform hover:scale-105 transition-all"
+                      >
+                        Learn more
+                      </Link>
+                    </div>
+                  )}
+                  {service.title === 'Food & Culture Experience Tours' && (
+                    <div className="mt-4">
+                      <Link
+                        href="/services/tours-trips"
+                        className="inline-block text-sm px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold hover:shadow-2xl hover:shadow-blue-500/50 transform hover:scale-105 transition-all"
+                      >
+                        Learn more
+                      </Link>
+                    </div>
                   )}
                 </div>
               </div>
