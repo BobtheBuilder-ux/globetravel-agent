@@ -54,11 +54,11 @@ export default function WhyChooseUs() {
             return (
               <div
                 key={idx}
-                className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 p-8 hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-50 to-teal-50 p-8 hover:shadow-2xl transition-all duration-300 hover:scale-105"
               >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-200 rounded-full -mr-16 -mt-16 opacity-20 group-hover:scale-150 transition-transform duration-500"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-200 rounded-full -mr-16 -mt-16 opacity-20 group-hover:scale-150 transition-transform duration-500"></div>
                 <div className="relative">
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-xl mb-4 shadow-lg group-hover:rotate-6 transition-transform">
+                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-xl mb-4 shadow-lg group-hover:rotate-6 transition-transform">
                     <Icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -74,7 +74,7 @@ export default function WhyChooseUs() {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="inline-block bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl p-1 shadow-2xl">
+          <div className="inline-block bg-gradient-to-r from-emerald-600 to-teal-600 rounded-3xl p-1 shadow-2xl">
             <div className="bg-white rounded-3xl p-8 max-w-4xl">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                 Ready for Detty December?
@@ -84,7 +84,7 @@ export default function WhyChooseUs() {
               </p>
               <button
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-full hover:shadow-2xl hover:shadow-blue-500/50 transform hover:scale-105 transition-all duration-300 text-lg"
+                className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-full hover:shadow-2xl hover:shadow-emerald-500/50 transform hover:scale-105 transition-all duration-300 text-lg"
               >
                 Contact Us to Book Today
               </button>

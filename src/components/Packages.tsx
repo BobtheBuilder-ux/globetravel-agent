@@ -1,15 +1,13 @@
-"use client";
 import { Crown, Star, Zap } from 'lucide-react';
 import { useState } from 'react';
-import Image from 'next/image';
 
 export default function Packages() {
   const [hoveredPackage, setHoveredPackage] = useState<string | null>(null);
 
   return (
     <section id="packages" className="py-20 bg-white relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full -mr-48 -mt-48 opacity-30"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-100 rounded-full -ml-48 -mb-48 opacity-30"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-100 rounded-full -mr-48 -mt-48 opacity-30"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-teal-100 rounded-full -ml-48 -mb-48 opacity-30"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
@@ -27,17 +25,17 @@ export default function Packages() {
             onMouseEnter={() => setHoveredPackage('vip')}
             onMouseLeave={() => setHoveredPackage(null)}
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-3xl transform group-hover:scale-105 transition-transform duration-300 shadow-2xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-3xl transform group-hover:scale-105 transition-transform duration-300 shadow-2xl"></div>
             <div className="relative bg-white rounded-3xl p-8 m-1 shadow-xl">
               <div className="absolute top-4 right-4">
-                <div className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                <div className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                   POPULAR
                 </div>
               </div>
               <div className="flex items-center justify-center mb-6">
                 <div className="relative">
-                  <Crown className={`w-16 h-16 text-blue-600 transition-transform ${hoveredPackage === 'vip' ? 'scale-110 rotate-12' : ''}`} />
-                  <Zap className="w-6 h-6 text-cyan-500 absolute -top-1 -right-1 animate-pulse" />
+                  <Crown className={`w-16 h-16 text-emerald-600 transition-transform ${hoveredPackage === 'vip' ? 'scale-110 rotate-12' : ''}`} />
+                  <Zap className="w-6 h-6 text-teal-500 absolute -top-1 -right-1 animate-pulse" />
                 </div>
               </div>
               <h3 className="text-3xl font-bold text-center mb-4 text-gray-900">VIP Package</h3>
@@ -45,16 +43,12 @@ export default function Packages() {
                 The ultimate luxury experience for Detty December
               </p>
 
-              <div className="mb-6 p-4 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl">
-                <div className="w-full h-48 relative mb-3">
-                  <Image
-                    src="https://images.pexels.com/photos/1591373/pexels-photo-1591373.jpeg?auto=compress&cs=tinysrgb&w=800"
-                    alt="VIP Experience"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 800px"
-                    className="object-cover rounded-lg"
-                  />
-                </div>
+              <div className="mb-6 p-4 bg-gradient-to-r from-emerald-50 to-teal-50 rounded-xl">
+                <img
+                  src="https://images.pexels.com/photos/1591373/pexels-photo-1591373.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="VIP Experience"
+                  className="w-full h-48 object-cover rounded-lg mb-3"
+                />
                 <p className="text-sm text-gray-600 text-center italic">Experience luxury at every step</p>
               </div>
 
@@ -71,14 +65,14 @@ export default function Packages() {
                   'Dedicated concierge service'
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start group/item">
-                    <Star className="w-5 h-5 text-blue-600 mr-3 flex-shrink-0 mt-0.5 group-hover/item:scale-125 transition-transform" />
+                    <Star className="w-5 h-5 text-emerald-600 mr-3 flex-shrink-0 mt-0.5 group-hover/item:scale-125 transition-transform" />
                     <span className="text-gray-700">{item}</span>
                   </li>
                 ))}
               </ul>
               <button
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="w-full py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-full hover:shadow-2xl hover:shadow-blue-500/50 transform hover:scale-105 transition-all duration-300"
+                className="w-full py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-full hover:shadow-2xl hover:shadow-emerald-500/50 transform hover:scale-105 transition-all duration-300"
               >
                 Book VIP Package
               </button>
@@ -101,15 +95,11 @@ export default function Packages() {
               </p>
 
               <div className="mb-6 p-4 bg-gray-50 rounded-xl">
-                <div className="w-full h-48 relative mb-3">
-                  <Image
-                    src="https://images.pexels.com/photos/2034851/pexels-photo-2034851.jpeg?auto=compress&cs=tinysrgb&w=800"
-                    alt="Basic Experience"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 800px"
-                    className="object-cover rounded-lg"
-                  />
-                </div>
+                <img
+                  src="https://images.pexels.com/photos/2034851/pexels-photo-2034851.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Basic Experience"
+                  className="w-full h-48 object-cover rounded-lg mb-3"
+                />
                 <p className="text-sm text-gray-600 text-center italic">Quality essentials for your journey</p>
               </div>
 
